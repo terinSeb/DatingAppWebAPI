@@ -53,6 +53,7 @@ namespace DatingAppCore.Controllers
         {
             var user = await _context.Users
                 .SingleOrDefaultAsync(x => x.UserName == loginDTO.Username.ToLower());
+            if (user == null) return Unauthorized("Inavlid User");
             using var hmac = new HMACSHA512(user.PasswordSalt);
             var computeHash = hmac.ComputeHash(Encoding.ASCII.GetBytes(loginDTO.Password));
             for(int i =0; i < computeHash.Length; i++)
