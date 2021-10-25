@@ -7,6 +7,8 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using DatingAppCore.Errors;
+using System.Text.Json;
+
 namespace DatingAppCore.Middleware
 {
     public class ExceptionMiddleware
@@ -32,9 +34,13 @@ namespace DatingAppCore.Middleware
                 _logger.LogError(ex, ex.Message);
                 context.Response.ContentType = "application/json";
                 context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-                var environment = _env.IsDevelopment()
+                var response = _env.IsDevelopment()
                     ? new ApiExceptions(context.Response.StatusCode, ex.Message, ex.StackTrace?.ToString())
-                    : new ApiExceptions(context.Response.StatusCode, "Internal Sever Erro");
+                    : new ApiExceptions(context.Response.StatusCode, "Internal Sever Error");
+
+                var option = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
+                var json = JsonSerializer.Serialize(response, option);
+                await context.Response.WriteAsync(json);
             }
         }
     }
