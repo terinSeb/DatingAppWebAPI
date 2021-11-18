@@ -130,7 +130,8 @@ C:\Users\akhils\source\repos\DatingAppCore\DatingAppCore\obj\Debug\netcoreapp3.1
 C:\Users\akhils\source\repos\DatingAppCore\DatingAppCore\obj\Debug\netcoreapp3.1\DatingAppCore.csproj.CopyComplete
 C:\Users\akhils\source\repos\DatingAppCore\DatingAppCore\obj\Debug\netcoreapp3.1\DatingAppCore.dll
 C:\Users\akhils\source\repos\DatingAppCore\DatingAppCore\obj\Debug\netcoreapp3.1\DatingAppCore.pdb
-C:\Users\akhils\source\repos\DatingAppCore\DatingAppCore\obj\Debug\netcoreapp3.1\DatingAppCore.csproj.AssemblyReference.cache
 C:\Users\akhils\source\repos\DatingAppCore\DatingAppCore\obj\Debug\netcoreapp3.1\DatingAppCore.csproj.CoreCompileInputs.cache
 C:\Users\akhils\source\repos\DatingAppCore\DatingAppCore\obj\Debug\netcoreapp3.1\scopedcss\bundle\DatingAppCore.styles.css
 C:\Users\akhils\source\repos\DatingAppCore\DatingAppCore\obj\Debug\netcoreapp3.1\DatingAppCore.genruntimeconfig.cache
+C:\Users\akhils\source\repos\DatingAppCore\DatingAppCore\bin\Debug\netcoreapp3.1\Data\UserSeedData.json
+C:\Users\akhils\source\repos\DatingAppCore\DatingAppCore\obj\Debug\netcoreapp3.1\DatingAppCore.csproj.AssemblyReference.cache
