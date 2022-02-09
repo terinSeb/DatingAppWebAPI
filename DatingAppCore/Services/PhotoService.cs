@@ -43,8 +43,8 @@ namespace DatingAppCore.Services
         public Task<DeletionResult> DeletePhotoAsync(string PublicId)
         {
             var deleteParams = new DeletionParams(PublicId);
-            var result = _cloudinary.DestroyAsync(deleteParams);
-            return result;
+            var results = _cloudinary.DestroyAsync(deleteParams);
+            return results;
         }
     }
 }
