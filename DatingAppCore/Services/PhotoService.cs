@@ -29,7 +29,11 @@ namespace DatingAppCore.Services
             var uploadResult = new ImageUploadResult();
             if(file.Length > 0)
             {
-                using var stream = file.OpenReadStream();
+                using
+                    (
+                    var stream = file.OpenReadStream()
+
+            ) ;
                 var uploadParans = new ImageUploadParams
                 {
                     File = new FileDescription(file.FileName, stream),
