@@ -75,7 +75,7 @@ namespace DatingAppCore.Controllers
             if (await _userRepository.SaveAllAsync())
                 return _mapper.Map<PhotoDto>(Photo);
 
-            return BadRequest("Problem Adding Photo");
+            return BadRequest("Problem while Adding Photo");
         }
     }
 }

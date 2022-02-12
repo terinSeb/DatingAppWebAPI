@@ -8740,11 +8740,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\akhils\\source\\repos\\DatingAppCore\\DatingAppCore\\DatingAppCore.csproj",
+      "projectUniqueName": "D:\\DatingAppCore\\DatingAppWebAPI\\DatingAppCore\\DatingAppCore.csproj",
       "projectName": "DatingAppCore",
-      "projectPath": "C:\\Users\\akhils\\source\\repos\\DatingAppCore\\DatingAppCore\\DatingAppCore.csproj",
+      "projectPath": "D:\\DatingAppCore\\DatingAppWebAPI\\DatingAppCore\\DatingAppCore.csproj",
       "packagesPath": "C:\\Users\\akhils\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\akhils\\source\\repos\\DatingAppCore\\DatingAppCore\\obj\\",
+      "outputPath": "D:\\DatingAppCore\\DatingAppWebAPI\\DatingAppCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
