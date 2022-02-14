@@ -10,7 +10,7 @@ namespace DatingAppCore.Extensions
     {
         public static string GetUsername(this ClaimsPrincipal User)
         {
-            return user.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            return User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
         }
     }
 }

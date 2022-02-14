@@ -22,7 +22,7 @@ namespace DatingAppCore.Controllers
         private readonly IUserRepository _userRepository;
 
         private readonly IMapper _mapper;
-        private readonly IPhotoService _photoService
+        private readonly IPhotoService _photoService;
         public UsersController(IUserRepository userRepository,IMapper mapper, IPhotoService photoService)
         {
             _userRepository = userRepository;
