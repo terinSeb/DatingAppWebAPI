@@ -13,13 +13,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace DatingAppCore.Controllers
-{  
+{
     public class AccountController : BaseApiController
     {
         private readonly DataContext _context;
         private readonly ITokenService _tokenService;
 
-        public AccountController(DataContext context,ITokenService tokenService)
+        public AccountController(DataContext context, ITokenService tokenService)
         {
             _context = context;
             _tokenService = tokenService;
@@ -47,7 +47,7 @@ namespace DatingAppCore.Controllers
         {
             return await _context.Users.AnyAsync(x => x.UserName == username.ToLower());
         }
-        
+
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login(LoginDTO loginDTO)
         {
@@ -56,7 +56,7 @@ namespace DatingAppCore.Controllers
             if (user == null) return Unauthorized("Inavlid User");
             using var hmac = new HMACSHA512(user.PasswordSalt);
             var computeHash = hmac.ComputeHash(Encoding.ASCII.GetBytes(loginDTO.Password));
-            for(int i =0; i < computeHash.Length; i++)
+            for (int i = 0; i < computeHash.Length; i++)
             {
                 if (computeHash[i] != user.PasswordHash[i]) return Unauthorized("Inavlid Password");
             }
@@ -66,5 +66,7 @@ namespace DatingAppCore.Controllers
                 Token = _tokenService.CreateToken(user)
             };
         }
+        
+        
     }
 }

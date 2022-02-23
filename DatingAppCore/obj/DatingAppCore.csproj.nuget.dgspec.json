@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DatingAppCore\\DatingAppWebAPI\\DatingAppCore\\DatingAppCore.csproj": {}
+    "D:\\DatingAppCore\\DatingAppWebAPI\\DatingAppWebAPI\\DatingAppCore\\DatingAppCore.csproj": {}
   },
   "projects": {
-    "D:\\DatingAppCore\\DatingAppWebAPI\\DatingAppCore\\DatingAppCore.csproj": {
+    "D:\\DatingAppCore\\DatingAppWebAPI\\DatingAppWebAPI\\DatingAppCore\\DatingAppCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DatingAppCore\\DatingAppWebAPI\\DatingAppCore\\DatingAppCore.csproj",
+        "projectUniqueName": "D:\\DatingAppCore\\DatingAppWebAPI\\DatingAppWebAPI\\DatingAppCore\\DatingAppCore.csproj",
         "projectName": "DatingAppCore",
-        "projectPath": "D:\\DatingAppCore\\DatingAppWebAPI\\DatingAppCore\\DatingAppCore.csproj",
+        "projectPath": "D:\\DatingAppCore\\DatingAppWebAPI\\DatingAppWebAPI\\DatingAppCore\\DatingAppCore.csproj",
         "packagesPath": "C:\\Users\\akhils\\.nuget\\packages\\",
-        "outputPath": "D:\\DatingAppCore\\DatingAppWebAPI\\DatingAppCore\\obj\\",
+        "outputPath": "D:\\DatingAppCore\\DatingAppWebAPI\\DatingAppWebAPI\\DatingAppCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
