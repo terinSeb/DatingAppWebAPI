@@ -8,6 +8,7 @@ using DatingAppCore.Data;
 using DatingAppCore.DTOs;
 using DatingAppCore.Entities;
 using DatingAppCore.Extensions;
+using DatingAppCore.Helpers;
 using DatingAppCore.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -31,9 +32,9 @@ namespace DatingAppCore.Controllers
         }
 
         [HttpGet]        
-        public async Task<ActionResult<IEnumerable<MemberDTO>>> GetUsers()
+        public async Task<ActionResult<IEnumerable<MemberDTO>>> GetUsers(UserParams userParams )
         {
-            var users = await _userRepository.GetMembersAsync();
+            var users = await _userRepository.GetMembersAsync(userParams);
             return Ok(users);
         }
 
