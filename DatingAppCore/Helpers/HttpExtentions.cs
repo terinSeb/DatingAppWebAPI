@@ -13,7 +13,7 @@ namespace DatingAppCore.Helpers
         {
             var jsOptions = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
             //var paginationHeader = new PaginationHeader(currentPage, itemsPerPage, totalItems, totalPages);
-            response.Headers.Add("Pagintaion", JsonSerializer.Serialize(header,jsOptions));
+            response.Headers.Add("Pagination", JsonSerializer.Serialize(header,jsOptions));
             response.Headers.Add("Access-Control-Expose-Headers", "Pagintaion");
         }
     }
