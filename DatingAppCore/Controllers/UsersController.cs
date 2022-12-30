@@ -35,8 +35,9 @@ namespace DatingAppCore.Controllers
         public async Task<ActionResult<PagedList<MemberDTO>>> GetUsers([FromQuery]UserParams userParams )
         {
             var users = await _userRepository.GetMembersAsync(userParams);
-            Response.AddPaginationHeader(new PaginationHeader(users.CurrentPage, users.PageSize,
-                users.TotalCount, users.TotalPage));
+            Response.AddPagination(users.CurrentPage, users.PageSize,
+                 users.TotalCount, users.TotalPages);
+
             return Ok(users);
         }
 
