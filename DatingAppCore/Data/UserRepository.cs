@@ -35,6 +35,10 @@ namespace DatingAppCore.Data
             var query = _context.Users.AsQueryable();
             query = query.Where(x => x.UserName != userParams.CurrentUserName);
             query = query.Where(x => x.Gender == userParams.Gender);
+
+            var minDob = DateTime.Today.AddYears(-userParams.MaxAge - 1);
+            var maxDob = DateTime.Today.AddYears(-userParams.MinAge);
+            query = query.Where(u => u.DateOfBirth >= minDob && u.DateOfBirth <= maxDob);
             return await PagedList<MemberDTO>.CreateAsync(
                 query.AsNoTracking().ProjectTo<MemberDTO>(_mapper.ConfigurationProvider), 
                 userParams.PageNumber, userParams.PageSize);
